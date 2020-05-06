@@ -2,7 +2,7 @@
 
 This is a utility tool made for the project of CMPN101 Course in Spring 2020.
 
-You can download the project as an executable binary for `Win64` from the [Releases Section](./releases/latest).
+You can download the project as an executable binary for `Win64` from the [Releases Section](releases/latest).
 
 ## Usage
 To assemble a file, use the assembler as follows:
