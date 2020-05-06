@@ -17,12 +17,12 @@ enum class Operation: uint8_t {
     NEG = 10,
     MUL = 12,
     IMUL = 13,
-    NOT = 32,
-    AND = 33,
-    OR = 34,
-    XOR = 35,
-    SHL = 36,
-    SHR = 37
+    NOT = 16,
+    AND = 17,
+    OR = 18,
+    XOR = 19,
+    SHL = 20,
+    SHR = 21
 };
 
 const std::unordered_map<std::string, Operation> operation_lookup_table = {
@@ -76,7 +76,7 @@ struct Operand {
     } data;
 
     uint16_t encode() const {
-        return immediate << 8 | (immediate ? data.value : static_cast<uint8_t>(data.reg));
+        return (static_cast<uint16_t>(immediate) << 8) | (immediate ? data.value : static_cast<uint8_t>(data.reg));
     }
 };
 
@@ -86,8 +86,8 @@ struct Instruction {
     Operand operand;
 
     uint16_t encode() const{
-        return  static_cast<uint8_t>(opcode) << 11 | 
-                static_cast<uint8_t>(reg) << 9 |
+        return  (static_cast<uint16_t>(opcode) << 11) | 
+                (static_cast<uint16_t>(reg) << 9) |
                 operand.encode();
     }
 };
