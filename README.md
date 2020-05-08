@@ -5,7 +5,7 @@ This is a utility tool made for the project of CMPN101 Course in Spring 2020.
 You can download the project as an executable binary for `Win64` from the [Releases Section](https://github.com/yahiaetman/CMPN101-Assembler/releases/latest).
 
 ## Usage
-To assemble a file, use the assembler as follows:
+To assemble a file, use the assembler in the command line as follows:
 
 `.\assembler.exe code.asm -o binary.hex`
 
@@ -66,6 +66,13 @@ The binary file can loaded into a ROM in [Logisim](http://www.cburch.com/logisim
 ## Build
 
 The project was built under `Windows 10 64-bit` using `cmake 3.17.0-rc2` and `GCC 8.1.0`. It was not tested for any other platform, compiler or version of `cmake`.
+
+## Dependencies
+
+The project uses the following libraries:
+* [cpp-peglib](https://github.com/yhirose/cpp-peglib/)
+* [flags](https://github.com/sailormoon/flags)
+
 
 ## License
 The project is available as open source under the terms of the [MIT License](LICENSE).
